@@ -1177,7 +1177,7 @@
     .mobile-nav .logo {
         text-decoration: none;
         position: absolute;
-        top: 11px;
+        top: -13px;
         z-index: 999;
         left: 15px;
         color: #fff;
@@ -1195,7 +1195,7 @@
     }
     .mean-container .mean-bar {
         background-color: #fff;
-        height: 70px;
+        height: 105px;
         padding: 0
     }
     .mean-container .mean-nav {
