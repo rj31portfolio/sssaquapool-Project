@@ -36,6 +36,38 @@
 
     <!-- Title -->
     <title>SasPol - Pool Cleaning & Renovation HTML Template</title>
+
+
+    <style>
+        .product-details {
+            text-align: center;
+        }
+        .main-img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+        .thumbnail-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .thumbnail {
+            width: 70px;
+            height: 70px;
+            object-fit: cover;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .thumbnail:hover {
+            transform: scale(1.1);
+            border: 2px solid #007bff;
+        }
+    </style>
 </head>
 
 <body>
@@ -387,8 +419,16 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 col-md-12">
-                    <div class="product-details-image">
-                        <img src="assets/img/product-details/product-details-1.jpg" alt="Image">
+                    <div class="product-details">
+                        <div class="product-details-image">
+                            <img id="mainImage" src="assets/img/product/product-4.jpg" alt="Product Image" class="main-img">
+                        </div>
+                        <div class="thumbnail-container">
+                            <img src="assets/img/product/product-4.jpg" class="thumbnail" onmouseover="changeImage(this)">
+                            <img src="assets/img/product/product-3.jpg" class="thumbnail" onmouseover="changeImage(this)">
+                            <img src="assets/img/product/product-2.jpg" class="thumbnail" onmouseover="changeImage(this)">
+                            <img src="assets/img/product/product-1.jpg" class="thumbnail" onmouseover="changeImage(this)">
+                        </div>
                     </div>
                 </div>
 
@@ -1114,6 +1154,12 @@
     <script src="assets/js/ajaxchimp.min.js"></script>
     <!-- Custom JS -->
     <script src="assets/js/custom.js"></script>
+
+    <script>
+        function changeImage(element) {
+            document.getElementById('mainImage').src = element.src;
+        }
+    </script>
 </body>
 
 </html>
